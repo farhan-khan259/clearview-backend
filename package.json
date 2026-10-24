@@ -1,0 +1,35 @@
+{
+  "name": "@clearview/backend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node api.js && node --import tsx --watch src/server.ts",
+    "build": "node api.js && tsc",
+    "start": "node api.js && node --env-file=.env dist/server.js",
+    "bootstrap": "node --import tsx src/bootstrap.ts",
+    "test": "node --import tsx --test tests/*.test.ts"
+  },
+  "dependencies": {
+    "@clearview/shared": "*",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.16.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.0",
+    "@types/supertest": "^6.0.2",
+    "mongodb-memory-server": "^10.4.3",
+    "supertest": "^7.1.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3"
+  }
+}
